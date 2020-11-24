@@ -7,15 +7,11 @@ class Pages extends Controller
 
     public function index()
     {
-        $this->view('hello');
+        $this->view('pages/index', ['title' => 'Welcome']);
     }
 
-    public function about($id)
+    public function about()
     {
-        if ($id) {
-            echo $id;
-        } else {
-            echo 'about';
-        }
+        $this->view('pages/about');
     }
 }
